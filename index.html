@@ -3,6 +3,56 @@
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <div class='main-body'>
+  
+  <style>
+div.main-body {
+  display: grid;
+  grid-template-columns: minmax(300px, auto) 1fr;
+  grid-gap: 20px;
+  grid-template-areas: "navbar mainContent";
+}
+
+nav#navbar {
+  grid-area: navbar;
+  position: fixed;
+}
+
+nav#navbar a {
+  display: block;
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: blue;
+}
+
+main#main-doc {
+  grid-area: mainContent;
+}
+
+header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: blue;
+}
+
+code {
+  background-color: #89CFF0;
+  padding: 20px;
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  div.main-body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "mainContent";
+  }
+    nav#navbar {
+    position: inherit;
+  }
+}
+
+</style>
 
   <nav id="navbar">
     <header>
@@ -100,54 +150,6 @@ console.log(x);  // 5</code>
   </main>
 </div>
 
-<style>
-div.main-body {
-  display: grid;
-  grid-template-columns: minmax(300px, auto) 1fr;
-  grid-gap: 20px;
-  grid-template-areas: "navbar mainContent";
-}
 
-nav#navbar {
-  grid-area: navbar;
-  position: fixed;
-}
-
-nav#navbar a {
-  display: block;
-  border: 1px solid blue;
-  padding: 5px;
-  margin: 10px 0;
-  text-decoration: none;
-  color: blue;
-}
-
-main#main-doc {
-  grid-area: mainContent;
-}
-
-header {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: blue
-}
-
-code {
-  background-color: #89CFF0;
-  padding: 20px;
-  display: block;
-}
-
-@media screen and (max-width: 750px) {
-  div.main-body {
-    grid-template-columns: 1fr;
-    grid-template-areas: "navbar" "mainContent";
-  }
-    nav#navbar {
-    position: inherit;
-  }
-}
-
-</style>
 
  
